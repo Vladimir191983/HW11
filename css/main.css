@@ -1,0 +1,594 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*------------------------------Eric Meyers end--------------------------*/
+/*----------------------------------320x1564-----------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    font:14px/6.98vw 'Montserrat', sans-serif;
+    color: #515151;
+}
+
+.container{
+    position: relative;
+}
+
+#navigation-top, #navigation-top .navigation-title, #navigation-top .top-menu .menu-items{
+    color: white;
+    background: #373c3f;
+    font-size: 3.75vw;
+}
+
+ #navigation-top  {
+     cursor: pointer;
+     display: flex;
+     height: 11.25vw;
+}
+
+#navigation-top  .header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items:stretch;
+    width:100%;
+}
+
+#navigation-top .navigation-title{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding-left: 5.93vw;
+    color: white;
+}
+
+#navigation-top .show-menu{
+    float: right;
+    background: #202529;
+    line-height: 11.25vw;
+    width:12.8vw;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#navigation-top .show-menu .show-img{
+    height: 3.125vw;
+}
+
+#navigation-top .top-menu{
+    position: absolute;
+    width: 100%;
+    top: auto;
+    transform: translateY(-100vw);
+    transition:1s;
+}
+
+#navigation-top:hover .top-menu  {
+    z-index:2;
+    transform: translateY(12vw);
+    transition: 1s ease-out;   
+}
+
+#navigation-top .top-menu li .menu-items{
+    display: block;
+    padding: 5vw  0 5vw 5vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: -1px;
+}
+
+#navigation-top .top-menu li a:hover{
+    background:  #202529;
+    transition: 1s;
+}
+
+.header-block{
+    padding: 17vw 20.31vw 16vw 8.4vw;
+    background: linear-gradient(to top right, #078ba4, #17b3c5);
+    color: white;
+}
+
+.header-block h1{
+    font-size: 5.625vw;
+    line-height: 7.18vw;
+    margin-bottom: 4.37vw;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.header-block .header-link {
+    font-size: 3.43vw;
+    position: relative;
+}
+
+.header-block .header-link a{
+    color: #aad7e0;
+}
+
+.header-block .header-link .img-arrow{
+    display: block;
+    bottom: 2px;
+    position: absolute;
+    right: 4px;
+    height: 2.5vw;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.header-block a:hover{
+    color:#202529;
+    transition: 1s;
+}
+
+.header-block a:hover+.img-arrow {
+    animation-name: motion;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    transition: 1s;
+}
+
+@keyframes motion{
+    from{
+        transform: translateX(0px)
+    }
+    to{transform: translateX(60px)}
+}
+
+.header-block2{
+    display: flex;
+    justify-content:  space-between;
+    padding-left: 8.43vw;
+    height: 23.43vw;
+    background: #27212c;
+    color: #6b5f76;   
+}
+
+.header-block2 .block2-text{
+    display:flex;
+    font-size: 2.81vw;
+    padding-top: 10.09vw;
+    word-spacing: 2px;
+}
+
+.header-block2 .button{
+    width: 22.5vw;
+    background:#bc3183;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.header-block2 .button .button-arrow {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+}
+
+.header-block2 .button img{
+    height: 3.75vw;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.header-block2 .button:hover{
+    background: #FF0000;
+    transform: rotate(1turn);
+    transition: 1s;
+}
+
+.gallery li .big-button{
+    display: flex;
+    height:87vw;
+    justify-content: center;
+    align-items: center;
+    background: #5b0fa1;
+    cursor: pointer;
+}
+
+.gallery ul li {
+    margin-bottom: -3px;
+}
+
+.gallery ul li .big-button img{
+    height: 10%;
+    width: auto;
+}
+
+.gallery .big-button:hover{
+    background: #00BFFF;
+    transform: rotate(-1turn);
+    transition: 1s;
+}
+
+.gallery ul li .gallery-img{
+    width: 100%;
+    height: auto;
+}
+
+.gallery li .gallery-img:hover{
+    transition: 1s;
+    transform: rotate(1turn);
+}
+
+.gallery ul li:nth-child(3) .gallery-img:hover{
+    transition: 1s;
+    transform: rotate(-1turn);
+}
+
+#content {
+    padding: 2.24rem 1.85rem 3.21rem 2.71rem;
+    background: #ebebeb;
+    line-height: 1.42rem;
+}
+
+#content .caption {
+    color: #088ca5;
+    font-size: 1.28rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+
+#content .articles{
+      margin-bottom: 1.85rem;
+}
+/*---------------------------------640x3126-----------------------------------*/
+
+@media (min-width:640px) {
+    html{
+        font:20px/6.88vw 'Montserrat', sans-serif;
+    }
+
+    #navigation-top, #navigation-top .navigation-title, #navigation-top .top-menu .menu-items{
+        font-size: 3.9vw;
+    }
+
+    #navigation-top  {
+        height: 11.4vw;
+    }
+
+    #navigation-top .navigation-title{
+        padding-left: 5.78vw;
+    }
+
+    #navigation-top .show-menu{
+        width:12.5vw;
+        line-height:  11.56vw;
+    }
+
+    #navigation-top:hover .top-menu {
+        transform: translateY(72px);
+    }
+
+    .header-block{
+        padding: 17.18vw 19.6vw 15.95vw 8.125vw;
+    }
+
+    .header-block h1{
+        font-size: 6.09vw;
+        line-height: 6.4vw;
+        margin-bottom: 5.16vw;
+    }
+
+    .header-block .header-link  {
+        font-size: 3.59vw;
+    }
+
+    .header-block .header-link .img-arrow{
+        height: 2.9vw;
+        right: 12px;
+    }
+
+    .header-block2 .block2-text{
+        font-size: 2.96vw;
+        padding-top: 10.78vw;
+        word-spacing: 1px;
+    }
+
+    .header-block2 .button img{
+        height: 4.062vw;
+    }
+
+    .gallery ul li {
+        margin-bottom: -4px;
+    }
+
+    #content {
+        padding: 3.15rem 1.85rem 2rem 3.65rem;
+        line-height: 2.2rem;
+    }
+
+    #content .caption {
+        font-size: 1.45rem;
+        margin-bottom: 1.7rem;
+    }
+
+    #content .articles{
+        margin-bottom: 2.4rem;
+        letter-spacing: 2px;
+        word-spacing: -4px;
+    }
+}
+
+/*------------------------------------980x1717----------------------------------*/
+@media (min-width:980px){
+    
+    html{
+        font:14px/29px 'Montserrat', sans-serif;
+    }
+
+    #navigation-top{
+        height: 6.97rem;
+        display: block;
+    }
+    
+    #navigation-top .header-menu .navigation-title, #navigation-top .header-menu .show-menu{
+        display: none;
+    }
+    
+    #navigation-top .top-menu{
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        transform: translateY(0);
+    }
+
+    #navigation-top .top-menu li{
+        display: inline-flex;        
+    }
+    
+    #navigation-top .top-menu li .menu-items{
+        padding: 3.21rem  0.78rem  2.85rem 0.78rem;
+        line-height: 0.93rem;
+        font-size: 0.93rem;
+        letter-spacing: 2px;
+    }
+    
+    #navigation-top .top-menu li:first-child .menu-items{
+        padding-left: 3.64rem;
+    }
+    
+    #navigation-top:hover .top-menu{
+        transform: none;
+    }
+
+    .header-block {
+        padding: 18.6vw 19.9vw 16vw 8vw;
+    }
+
+    .header-block h1 {
+        font-size: 6.02vw;
+        line-height: 6.63vw;
+        margin-bottom: 47px;
+        letter-spacing: 2px;
+    }
+
+    .header-block .header-link {
+        font-size: 3.47vw;
+        position: relative;
+    }
+
+    .header-block .header-link .img-arrow {
+        height: 2.75vw;
+        bottom: 3px;
+        right: 1.53vw;
+    }
+
+    .header-block2 {
+        padding-left: 8.06vw;
+        height: 23.78vw;
+    }
+
+    .header-block2 .block2-text {
+        font-size: 2.14rem;
+        padding-top: 10.8vw;
+        word-spacing: 0;
+    }
+
+    .header-block2 .button {
+        width: 22.34vw;
+    }
+
+    .header-block2 .button img {
+        height: 40px;
+    }
+    
+    .gallery ,.gallery ul li .big-button, .gallery ul li .gallery-img{
+         height:28.98vw;
+    }
+    
+    .gallery ul{
+        width: 100%;      
+        display: flex;        
+        flex-wrap: nowrap;
+    }
+    
+    .gallery ul li {
+        margin-bottom: 0;
+    }
+
+    .gallery ul li:first-child{
+        width: 33.5%;
+    }
+    
+    .gallery ul li .gallery-img{
+        width: auto;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .gallery li .gallery-img:hover{
+        transform: scale(1.5,1.5);
+        transition: 0.5s;
+        border: 4px double red;
+    }
+
+    .gallery ul li:nth-child(3) .gallery-img:hover{
+        transform: scale(1.5,1.5) translateX(-65%);
+        transition: 0.5s;
+        border: 4px double red;
+    }
+
+    .gallery li .big-button{
+        height:100%;
+    }
+
+    #content {
+        padding: 65px 86px 67px 74px;
+    }
+
+    #content .caption {
+        font-size: 2.07rem;
+        margin-bottom:1.3rem;
+    }
+    
+    #content .text{
+        overflow: hidden;
+        letter-spacing: 0px;
+        word-spacing: 0px;
+    }
+    
+    #content .text .articles{
+        margin-left: 2px;
+        margin-bottom: 2.2rem;
+    }
+
+    #content .left-side{
+        float: left;
+    }
+    
+    #content .right-side{
+        float: right;
+    }
+}
+
+/*------------------------------------1024x1776----------------------------------*/
+
+@media (min-width: 1024px) {
+
+    html{
+        font:14px/26px 'Montserrat', sans-serif;
+    }
+
+    #navigation-top .top-menu li:first-child .menu-items{
+        padding-left: 3.78rem;
+    }
+
+    .header-block {
+        padding: 18.9vw 19.04vw 16.01vw 8.1vw;
+    }
+
+    .header-block h1 {
+        font-size: 6.05vw;
+        line-height: 6.54vw;
+        margin-bottom: 48px;
+        letter-spacing: 2px;
+    }
+
+    .header-block .header-link {
+        font-size: 3.61vw;
+    }
+
+    .header-block .header-link .img-arrow {
+        height: 2.63vw;
+        bottom: 3px;
+        right: 2.34vw;
+    }
+
+    .header-block2 {
+        padding-left: 8.3vw;
+        height: 24.1vw;
+    }
+
+    .header-block2 .block2-text {
+        font-size: 2.14rem;
+        padding-top: 10.9vw;
+    }
+
+    .header-block2 .button {
+        width: 22.16vw;
+    }
+
+    .header-block2 .button img {
+        height: 40px;
+    }
+
+    .gallery,.gallery ul li .big-button, .gallery ul li .gallery-img{
+        height: 28.8vw;
+    }
+
+    #content {
+        padding:52px 65px 67px 80px;
+    }
+
+    #content .caption {
+        font-size: 2.07rem;
+        margin-bottom: 1.3rem;
+    }
+
+    #content .text .articles{
+        margin-bottom: 2.2rem;
+    }
+}
+
+
+
+
